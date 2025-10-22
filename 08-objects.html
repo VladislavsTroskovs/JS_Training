@@ -61,11 +61,36 @@
             message: 'hello from Object1'
         };
         const Object2 = Object1;
-
+        
+        console.log(Object1.message);
+        console.log(Object2.message);
         Object1.message = 'Another text';
         console.log(Object1.message);
-        Object2.message = 'Another text in Object2';
+        //Object2.message = 'Another text in Object2';
         console.log(Object2.message);
+
+        const Object3 = {
+            message: 'Another text',
+            price: 7.99
+        };
+        console.log(Object1.message === Object2.message);
+        console.log(Object3.message === Object1.message);
+        const {message, price} = Object3; //shortcut  === const message = Object3.message; === take property message from object and save to variable message
+        console.log(message, price);
+        console.log(price);
+
+        const Object4 = {
+            //message: message      //Shorthand method
+            message,
+            /*method: function function1(){
+                console.log('method');
+            }*/
+            method(){
+                console.log('method')
+            }
+        };
+        console.log(Object4);
+        Object4.method();
     </script>
 </body>
 </html> 
