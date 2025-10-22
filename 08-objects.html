@@ -24,7 +24,7 @@
         delete product.newProperty;
         console.log(product);*/
 
-        const product2 = {
+        /*const product2 = {
             name: 'shirt',
             ['delivery-time']: '1 day',
             rating: {
@@ -38,10 +38,34 @@
         console.log(product2);
         console.log(product2.name);
         console.log(product2['name']);
-        //console.log(product2.delivery-time);  /*JS try to do math '-' cause*/
+        //console.log(product2.delivery-time);  //JS try to do math '-' cause
         console.log(product2['delivery-time']);
         console.log(product2.rating.count);
         product2.fun();
+
+        console.log(typeof(JSON.stringify(product2)));
+        console.log(JSON.stringify(product2)); //Object -> string
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString)); //string -> Object
+
+        console.log(JSON.parse(localStorage.getItem('score'))); //string -> Object -> save
+        localStorage.setItem('message', JSON.stringify(score)); //local ctorage only supports strings
+        localStorage.removeItem('score');*/
+        const text = 'hello';
+        console.log(text.length);
+        console.log(text.toUpperCase());
+        console.log(text);
+
+        const Object1 = {
+            message: 'hello from Object1'
+        };
+        const Object2 = Object1;
+
+        Object1.message = 'Another text';
+        console.log(Object1.message);
+        Object2.message = 'Another text in Object2';
+        console.log(Object2.message);
     </script>
 </body>
 </html> 
