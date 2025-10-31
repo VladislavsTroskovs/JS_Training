@@ -14,13 +14,20 @@
     <button>
         hello
     </button>
-    <button>
+    <button class="js-button">
         hello2
     </button>
 
     <script>
         document.querySelector('button');
-        console.log(document.querySelector('button').innerHTML);   //take first button element
+        console.log(document.querySelector('button')); //take first button element
+        console.log(document.querySelector('button').innerHTML);   //take content inside first button (this time it is text)
+        document.querySelector('button').innerHTML = 'Changed!';
+
+        console.log(document.querySelector('.js-button')); //second button
+
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
 
         /*console.log(document.title);
         console.log(document.body);
