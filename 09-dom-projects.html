@@ -7,10 +7,42 @@
 </head>
 <body>
     <p>Youtube Subscribe Button</p>
-    <button class = "js-subcribe-button" onclick="fun1();">Subscribe</button>
-    <p>Rock Paper Scissors</p>
+    <button class = "js-subcribe-button" onclick="fun1();">Subscribe</button><hr>
+    <p>Amazon Shiping Calculator</p>
+    <p>If cost less than 40$: +10$ delivery</p>
+    <p>If cost more than 40$: +0$ delivery</p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeyDown();">
+    <button onclick="
+        calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
 
     <script>
+        /*String(25)
+        console.log('25'-5); //20
+        console.log('25'+5); //255 Not recommended to use*/ 
+
+        /*window.document
+        window.console.log();
+        window.alert();*/
+
+        function handleCostKeyDown(){
+            //console.log(event.key);
+            if(event.key === 'Enter'){
+            calculateTotal();
+        }
+        }
+        function calculateTotal(){
+            /*const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);*/
+            let cost = Number(document.querySelector('.js-cost-input').value);
+            if(cost < 40) {
+                //cost += 10;
+                cost = cost +10; 
+            }
+            document.querySelector('.js-total-cost').innerHTML = `Total cost: $${cost}`;
+        }
+
         function fun1(){
             const buttonElement = document.querySelector('.js-subcribe-button');
             if(buttonElement.innerText === 'Subscribe'){
