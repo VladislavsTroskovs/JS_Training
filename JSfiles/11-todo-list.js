@@ -32,30 +32,6 @@ function addTodo2(){
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
 }
 
-/*const todoList3 = ['First task', 'Second task'];
-let todoList2HTML = '';
-for(let i = 0; i<todoList3.length; i++){
-        const html = `<p>${todoList3[i]}</p>`;
-        todoList2HTML += html;
-    }
-document.querySelector('.js-todo-list-2').innerHTML = todoList2HTML;
-function addTodo3(){
-    const inputElement = document.querySelector('.js-todo-input-3');
-    const name = inputElement.value;
-    const dateElement = document.querySelector('.js-todo-due-date');
-    const dueDate = dateElement.value;
-    todoList3.push(`${name} - ${dueDate}`);
-    console.log(todoList3);
-
-    inputElement.value = '';
-    todoList2HTML = '';
-    for(let i = 0; i<todoList3.length; i++){
-        const html = `<p>${todoList3[i]} <button onclick="todoList3.splice(i, 1);">Delete</button></p>`;
-        todoList2HTML += html;
-    }
-    document.querySelector('.js-todo-list-2').innerHTML = todoList2HTML;
-}
-*/
 const todoList3 = [{name: 'First task', dueDate: '2025-11-05'}];
 
 function renderTodoList3() {
