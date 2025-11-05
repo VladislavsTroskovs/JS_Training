@@ -47,8 +47,6 @@ function renderTodoList3() {
     }
     document.querySelector('.js-todo-list-2').innerHTML = todoList2HTML;
 }
-
-
 function addTodo3() {
     const inputElement = document.querySelector('.js-todo-input-3');
     const dateElement = document.querySelector('.js-todo-due-date');
@@ -71,4 +69,4 @@ function deleteTodo3(index) {
 
 // начальная отрисовка
 renderTodoList3();
-
+document.querySelector('.add-todo-button').addEventListener('click', ()=>{addTodo3();});
