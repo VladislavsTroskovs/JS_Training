@@ -4,12 +4,12 @@ if (!cart){
         {
             productId: '5968897c-4d27-4872-89f6-5bcb052746d7',
             quantity: 2,
-            deliveryOptionId: '1'
+            deliveryOptionId: 1
         },
         {
             productId: '901eb2ca-386d-432e-82f0-6fb1ee7bf969',
             quantity: 2,
-            deliveryOptionId: '2'
+            deliveryOptionId: 2
         }
     ];
 }
@@ -55,6 +55,6 @@ export function updateDeliveryOption(productId, deliveryOptionId){
             matchingItem = cartItem;
         }
     });
-    matchingItem.deliveryOptionId = deliveryOptionId;
+    matchingItem.deliveryOptionId = Number(deliveryOptionId);
     saveToStorage();
 }
